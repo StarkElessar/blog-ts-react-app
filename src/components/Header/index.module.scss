@@ -1,0 +1,27 @@
+.header {
+	background-color: var(--color-white);
+}
+
+.headerContainer {
+	display: flex;
+	align-items: center;
+	height: var(--height-header);
+}
+
+.title {
+	margin-right: auto;
+}
+
+.headerBtn {
+	background-color: var(--color-gray-1);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+}
+
+.authGroup {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin-left: 20px;
+}

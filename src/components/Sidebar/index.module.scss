@@ -1,0 +1,18 @@
+.sidebar {
+	background-color: var(--color-dark);
+}
+
+.header {
+	height: var(--height-header);
+	display: flex;
+	align-items: center;
+}
+
+.logo {
+	font-size: 36px;
+	color: var(--color-white);
+}
+
+.menuLink {
+	color: var(--color-white);
+}
