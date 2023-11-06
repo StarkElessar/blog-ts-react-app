@@ -25,7 +25,7 @@ const baseQuery = fetchBaseQuery({
 });
 
 const baseQueryWithRetry = retry(baseQuery, {
-	maxRetries: 1,
+	maxRetries: 0,
 });
 
 type TQueryWithReAuth = BaseQueryFn<string | FetchArgs, unknown, FetchBaseQueryError>
@@ -42,7 +42,7 @@ const baseQueryWithReAuth: TQueryWithReAuth = async (args, api, extraOptions) =>
 			 * try to get new token
 			 * */
 			const response = await baseQueryWithRetry({ url: '/auth/refresh', method: 'GET' }, api, extraOptions);
-			const data = response.data as IResponseUserLogin;
+			const data = <IResponseUserLogin>response.data;
 			if (data) {
 				api.dispatch(actionsToken.addToken(data.accessToken));
 				localStorage.setItem('accessToken', data.accessToken);

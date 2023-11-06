@@ -1,0 +1,30 @@
+.input {
+	border: 1px solid #333;
+}
+
+.button {
+	--shift: -2px;
+
+	background-color: var(--color-white);
+	color: var(--color-black);
+	font-weight: 700;
+	font-family: Oswald, sans-serif;
+	letter-spacing: 0.08em;
+	border: 1px solid var(--border-color-theme);
+	padding: 5px 15px;
+	border-radius: 25px;
+	transform: translate(var(--shift), var(--shift));
+	box-shadow: var(--small-shadow);
+	transition: transform .3s var(--transition-bezier),
+	box-shadow .3s var(--transition-bezier),
+	background-color var(--base-transition);
+
+	&:hover {
+		background-color: var(--color-white-hover);
+	}
+
+	&:active {
+		--shift: 0;
+		box-shadow: none;
+	}
+}
