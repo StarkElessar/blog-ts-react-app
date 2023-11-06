@@ -1,0 +1,17 @@
+.footer {
+	margin-top: 120px;
+	background-color: var(--background-color-content);
+	border-top: 1px solid var(--border-color-theme);
+	box-shadow: 10px 0 20px rgba(#000, 10%);
+
+	// .footer__block
+	&__block {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: 10px;
+
+		& > * {
+			padding: 40px 0;
+		}
+	}
+}
