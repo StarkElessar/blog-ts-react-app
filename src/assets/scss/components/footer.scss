@@ -10,6 +10,7 @@
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 10px;
 
+		// TODO: очень временный кастыль, так делать нельзя, скоро уберу
 		& > * {
 			padding: 40px 0;
 		}

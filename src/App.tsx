@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
 
 import { PATHS } from './utils/constants';
-import { RootLayout } from './components/Layout';
+import { RootLayout } from './components/RootLayout';
 import { HomePage } from './pages/HomePage';
 import PostPage from './pages/PostPage';
 import AllPostsPage from './pages/AllPostsPage';

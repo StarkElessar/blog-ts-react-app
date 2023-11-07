@@ -14,7 +14,7 @@ export const RootLayout = () => {
 					<div className="main-content__container">
 						<Outlet/>
 
-						<aside className="main-content__right side-bar">
+						<aside className="main-content__right sidebar">
 							<h2>Side Bar</h2>
 						</aside>
 					</div>
