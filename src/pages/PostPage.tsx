@@ -1,9 +1,12 @@
-import React from 'react';
+import { FC, ReactElement } from 'react';
+import { useParams } from 'react-router-dom';
 
-const PostPage = () => {
+const PostPage: FC = (): ReactElement => {
+	const params = useParams<{ id: string }>();
+
 	return (
 		<div>
-			<h1>Post Id: 1</h1>
+			<h1>Post ID: { params.id }</h1>
 		</div>
 	);
 };
