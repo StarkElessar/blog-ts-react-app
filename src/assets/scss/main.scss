@@ -2,6 +2,9 @@
 
 @import "config/fonts";
 @import "config/vars";
+@import "config/functions";
+@import "config/mixins";
+@import "config/placeholder-selectors";
 @import "config/reset";
 @import "config/scrollbar";
 @import "config/base";
@@ -9,3 +12,5 @@
 @import "components/common";
 @import "components/header";
 @import "components/footer";
+@import "components/sidebar";
+@import "components/recent-post-item";

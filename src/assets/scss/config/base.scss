@@ -1,9 +1,10 @@
-.wrapper {
-	position: relative;
-	height: 100%;
+@import "placeholder-selectors";
 
-	/** Поменять на clip - если используется в проекте position: sticky */
-	overflow: hidden;
+.wrapper {
+	@extend %flex-column;
+	position: relative;
+	min-height: 100%;
+	overflow: clip;
 	background-color: var(--background-color-wrapper);
 	
 	&::before,
@@ -23,12 +24,11 @@
 
 	// .wrapper__page
 	&__page {
-		position: relative;
-		min-height: 100%;
-		z-index: 2;
+		flex: 1 1 auto;
 
-		display: flex;
-		flex-direction: column;
+		position: relative;
+		z-index: 2;
+		@extend %flex-column;
 	}
 }
 
