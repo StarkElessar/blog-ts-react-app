@@ -2,33 +2,30 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-
+  gap: 12px 10px;
 }
-
 
 .category {
   padding: 6px 15px;
-  margin-bottom: 12px;
-  margin-right: 10px;
 
-  // .category__pentahedron
-  &__pentahedron {
+  // .category__icon
+  &__icon {
     display: inline-block;
     position: relative;
     width: 10px;
     height: 10px;
     margin-right: 7px;
-    clip-path: polygon(50% 0, 100% 38%, 81% 100%, 19% 100%, 0 38%);
+
+    svg path {
+      stroke: rgba(#000, 40%);
+    }
   }
 
   // .category__name
-  &__name{
-    color: #c4c5fe;
+  &__name {
+    color: var(--color-black);
     line-height: 1.2;
-    font-weight: 300;
-
-    &:hover{
-      color: #111111;
-    }
+    font-size: 14px;
+    font-family: Outfit, sans-serif;
   }
 }

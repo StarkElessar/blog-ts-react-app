@@ -1,25 +1,19 @@
-import react, {FC} from "react";
+import React, { FC } from 'react';
+import { Category } from './Category';
+import { CATEGORIES } from '../../utils/mock-data';
 
 
-export interface IProps{
-    categories: Categories[],
-}
-interface Categories{
-    categoryName: string,
-    color: string
-}
-
-export const Categories: FC<IProps>  = ({categories}) => {
-
+export const Categories: FC = () => {
 
   return (
-      <>
-        <div className={"categories-container"}>
-            {categories.map(category => <div className={"category button-un-hover"}>
-                <span className={"category__pentahedron"} style={{background: `${category.color}`}}></span>
-                <span className={"category__name"}>{`${category.categoryName}`}</span>
-            </div>)}
-        </div>
-      </>
-  )
-}
+    <div className={'categories-container'}>
+      {
+        CATEGORIES.map((category) => (
+          <Category key={category.id} { ...category } />
+        ))
+      }
+    </div>
+  );
+};
+
+
