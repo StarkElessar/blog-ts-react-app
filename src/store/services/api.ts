@@ -9,7 +9,7 @@ import {
 
 import { RootState } from '../index';
 import { actions as actionsToken } from '../slices/tokenSlice';
-import { IResponseUserLogin } from '../../types/user/userLoginResponse.interface';
+import { IResponseUserLogin } from '../../types/user/user-login-response.interface';
 
 const baseQuery = fetchBaseQuery({
 	baseUrl: `${process.env.REACT_APP_API_URL}/api`,

@@ -9,10 +9,25 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		gap: 10px;
+		position: relative;
+
 
 		// TODO: очень временный кастыль, так делать нельзя, скоро уберу
 		& > * {
 			padding: 40px 0;
 		}
 	}
+
+	// .footer__label
+	&__label {
+		position: absolute;
+		top: -20px;
+		z-index: 2;
+	}
 }
+
+.categories-footer-container {
+	display: flex;
+	position: relative;
+}
+

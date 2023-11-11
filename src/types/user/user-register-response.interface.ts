@@ -1,4 +1,4 @@
-import { IUserData } from './userData.interface';
+import { IUserData } from './user-data.interface';
 
 export interface IResponseUserRegister {
 	accessToken: string;

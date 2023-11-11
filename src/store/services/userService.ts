@@ -1,5 +1,5 @@
 import { api } from './api';
-import { IUserModel } from '../../types/user/userModel.interface';
+import { IUserModel } from '../../types/user/user-model.interface';
 
 export const userApi = api.injectEndpoints({
 	endpoints: (builder) => ({

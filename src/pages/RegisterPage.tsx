@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from 'react';
 import { useRegisterMutation } from '../store/services/authService';
-import { IRequestUserRegister } from '../types/user/userRegister.interface';
+import { IRequestUserRegister } from '../types/user/user-register.interface';
 
 const initialFormData: IRequestUserRegister = {
 	email: '',

@@ -1,9 +1,9 @@
 import { api } from './api';
-import { IResponseUserRegister } from '../../types/user/userRegisterResponse.interface';
-import { IRequestUserRegister } from '../../types/user/userRegister.interface';
-import { IUserModel } from '../../types/user/userModel.interface';
-import { IRequestUserLogin } from '../../types/user/userLogin.interface';
-import { IResponseUserLogin } from '../../types/user/userLoginResponse.interface';
+import { IResponseUserRegister } from '../../types/user/user-register-response.interface';
+import { IRequestUserRegister } from '../../types/user/user-register.interface';
+import { IUserModel } from '../../types/user/user-model.interface';
+import { IRequestUserLogin } from '../../types/user/user-login.interface';
+import { IResponseUserLogin } from '../../types/user/user-login-response.interface';
 
 export const authApi = api.injectEndpoints({
 	endpoints: (builder) => ({
