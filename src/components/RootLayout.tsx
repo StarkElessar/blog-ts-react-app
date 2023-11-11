@@ -3,6 +3,34 @@ import { Outlet } from 'react-router-dom';
 
 import Header from './Header';
 import Footer from './Footer';
+import RecentPostItem from './RecentPostItem';
+
+import postImage from './../assets/images/recent-post-items/01.jpg';
+import { IRecentPost } from '../types';
+
+const RECENT_POSTS: IRecentPost[] = [
+	{
+		id: crypto.randomUUID(),
+		number: 1,
+		image: postImage,
+		title: 'The spectacle before us was indeed sublime',
+		date: new Date('9.26.2019'),
+	},
+	{
+		id: crypto.randomUUID(),
+		number: 2,
+		image: postImage,
+		title: 'Far far away, behind the word mountains',
+		date: new Date('11.9.2023'),
+	},
+	{
+		id: crypto.randomUUID(),
+		number: 3,
+		image: postImage,
+		title: 'Musical improvisation is the spontaneous music',
+		date: new Date('11.10.2023 20:19:20'),
+	},
+];
 
 export const RootLayout = () => {
 	return (
@@ -15,7 +43,14 @@ export const RootLayout = () => {
 						<Outlet/>
 
 						<aside className="main-content__right sidebar">
-							<h2>Side Bar</h2>
+							<div className="sidebar__item item-sidebar">
+								<h2 className="item-sidebar__label">Recent Posts</h2>
+								{
+									RECENT_POSTS.map((post) => (
+										<RecentPostItem key={post.id} { ...post }/>
+									))
+								}
+							</div>
 						</aside>
 					</div>
 				</main>
