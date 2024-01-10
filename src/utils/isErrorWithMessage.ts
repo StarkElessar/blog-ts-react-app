@@ -1,4 +1,4 @@
-import { ILoginError } from '../types/errorMessage.interface';
+import { ILoginError } from '../types/error-message.interface';
 
 export const isErrorWithMessage = (error: unknown): error is ILoginError => {
 	console.log('isErrorWithMessage', error);

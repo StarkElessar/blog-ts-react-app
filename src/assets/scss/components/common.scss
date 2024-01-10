@@ -29,3 +29,38 @@
 		box-shadow: none;
 	}
 }
+
+.button-un-hover {
+	--shift: 0px;
+
+	background-color: var(--color-white);
+	color: var(--color-black);
+	font-weight: 700;
+	font-family: Oswald, sans-serif;
+	letter-spacing: 0.08em;
+	border: 1px solid var(--border-color-theme);
+	border-radius: 25px;
+	transform: translate(var(--shift), var(--shift));
+	transition: transform .3s var(--transition-bezier),
+	box-shadow .3s var(--transition-bezier),
+	background-color var(--base-transition);
+
+	@include any-hover {background-color: var(--color-white-hover);
+		--shift: -2px;
+		box-shadow: var(--small-shadow); }
+
+	&:active {
+
+
+	}
+}
+
+.label {
+	padding: 4px 25px;
+	font-size: 20px;
+	line-height: 1.4;
+	font-weight: 700;
+	background-color: #fff;
+	border: 1px solid var(--border-color-theme);
+	border-radius: 100px;
+}
