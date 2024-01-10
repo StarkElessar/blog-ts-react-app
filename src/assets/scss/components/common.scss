@@ -39,13 +39,15 @@
 	font-family: Oswald, sans-serif;
 	letter-spacing: 0.08em;
 	border: 1px solid var(--border-color-theme);
+	border-radius: 25px;
+	transform: translate(var(--shift), var(--shift));
 	transition: transform .3s var(--transition-bezier),
 	box-shadow .3s var(--transition-bezier),
 	background-color var(--base-transition);
+
 	@include any-hover {background-color: var(--color-white-hover);
 		--shift: -2px;
 		box-shadow: var(--small-shadow); }
-
 
 	&:active {
 
